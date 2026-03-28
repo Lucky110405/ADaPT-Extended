@@ -1,0 +1,1491 @@
+{
+  "tasks": [],
+  "call_history": [
+    {
+      "id": "build a house",
+      "type": "map_node",
+      "path": [
+        "build a house"
+      ],
+      "timestamp": "2026-02-23T06:33:11Z"
+    },
+    {
+      "id": "build a house::\"Research local building codes and regulations\"",
+      "type": "map_node",
+      "path": [
+        "build a house",
+        "\"Research local building codes and regulations\""
+      ],
+      "timestamp": "2026-02-23T06:33:15Z"
+    },
+    {
+      "id": "Research local building codes and regulations::\"Research local building codes and regulations\"",
+      "type": "map_node",
+      "path": [
+        "Research local building codes and regulations",
+        "\"Research local building codes and regulations\""
+      ],
+      "timestamp": "2026-02-23T06:33:18Z"
+    },
+    {
+      "id": "Research local building codes and regulations::\"Research local building codes\"",
+      "type": "map_node",
+      "path": [
+        "Research local building codes and regulations",
+        "\"Research local building codes\""
+      ],
+      "timestamp": "2026-02-23T06:33:22Z"
+    },
+    {
+      "id": "Research local building codes and regulations::\"Gather relevant local regulations\"",
+      "type": "map_node",
+      "path": [
+        "Research local building codes and regulations",
+        "\"Gather relevant local regulations\""
+      ],
+      "timestamp": "2026-02-23T06:33:23Z"
+    },
+    {
+      "id": "Research local building codes and regulations::\"Analyze and summarize building code information\"",
+      "type": "map_node",
+      "path": [
+        "Research local building codes and regulations",
+        "\"Analyze and summarize building code information\""
+      ],
+      "timestamp": "2026-02-23T06:33:24Z"
+    },
+    {
+      "id": "Analyze and summarize building code information::\"Gather Building Plans and Specifications\"",
+      "type": "map_node",
+      "path": [
+        "Analyze and summarize building code information",
+        "\"Gather Building Plans and Specifications\""
+      ],
+      "timestamp": "2026-02-23T06:33:28Z"
+    },
+    {
+      "id": "Analyze and summarize building code information::\"Analyze Existing Code for Compliance\"",
+      "type": "map_node",
+      "path": [
+        "Analyze and summarize building code information",
+        "\"Analyze Existing Code for Compliance\""
+      ],
+      "timestamp": "2026-02-23T06:33:29Z"
+    },
+    {
+      "id": "Analyze Existing Code for Compliance::\"Analyze Code for Style and Standards\"",
+      "type": "map_node",
+      "path": [
+        "Analyze Existing Code for Compliance",
+        "\"Analyze Code for Style and Standards\""
+      ],
+      "timestamp": "2026-02-23T06:33:31Z"
+    },
+    {
+      "id": "Analyze Code for Style and Standards::\"Analyze Code Style\"",
+      "type": "map_node",
+      "path": [
+        "Analyze Code for Style and Standards",
+        "\"Analyze Code Style\""
+      ],
+      "timestamp": "2026-02-23T06:33:35Z"
+    },
+    {
+      "id": "buid a task",
+      "type": "map_node",
+      "path": [
+        "buid a task"
+      ],
+      "timestamp": "2026-02-23T08:55:09Z"
+    },
+    {
+      "id": "buid a fintech startup",
+      "type": "map_node",
+      "path": [
+        "buid a fintech startup"
+      ],
+      "timestamp": "2026-02-23T08:55:59Z"
+    },
+    {
+      "id": "buid a task",
+      "type": "map_node",
+      "path": [
+        "buid a task"
+      ],
+      "timestamp": "2026-02-23T08:56:42Z"
+    },
+    {
+      "id": "buid a fintech startup",
+      "type": "map_node",
+      "path": [
+        "buid a fintech startup"
+      ],
+      "timestamp": "2026-02-23T08:56:48Z"
+    },
+    {
+      "id": "examine the stock of tesla",
+      "type": "map_node",
+      "path": [
+        "examine the stock of tesla"
+      ],
+      "timestamp": "2026-02-23T08:58:21Z"
+    },
+    {
+      "id": "buid a fintech startup",
+      "type": "map_node",
+      "path": [
+        "buid a fintech startup"
+      ],
+      "timestamp": "2026-02-23T08:58:59Z"
+    },
+    {
+      "id": "build a house",
+      "type": "map_node",
+      "path": [
+        "build a house"
+      ],
+      "timestamp": "2026-02-23T09:01:34Z"
+    },
+    {
+      "id": "build a house::Assess site and requirements",
+      "type": "map_node",
+      "path": [
+        "build a house",
+        "Assess site and requirements"
+      ],
+      "timestamp": "2026-02-23T09:01:37Z"
+    },
+    {
+      "id": "Assess site and requirements::Analyze Existing Site Conditions",
+      "type": "map_node",
+      "path": [
+        "Assess site and requirements",
+        "Analyze Existing Site Conditions"
+      ],
+      "timestamp": "2026-02-23T09:01:41Z"
+    },
+    {
+      "id": "Assess site and requirements::Define Functional Requirements",
+      "type": "map_node",
+      "path": [
+        "Assess site and requirements",
+        "Define Functional Requirements"
+      ],
+      "timestamp": "2026-02-23T09:01:42Z"
+    },
+    {
+      "id": "Assess site and requirements::Develop Design Concept",
+      "type": "map_node",
+      "path": [
+        "Assess site and requirements",
+        "Develop Design Concept"
+      ],
+      "timestamp": "2026-02-23T09:01:43Z"
+    },
+    {
+      "id": "Develop Design Concept::Research Target Audience",
+      "type": "map_node",
+      "path": [
+        "Develop Design Concept",
+        "Research Target Audience"
+      ],
+      "timestamp": "2026-02-23T09:01:47Z"
+    },
+    {
+      "id": "Develop Design Concept::Define Core Concept",
+      "type": "map_node",
+      "path": [
+        "Develop Design Concept",
+        "Define Core Concept"
+      ],
+      "timestamp": "2026-02-23T09:01:48Z"
+    },
+    {
+      "id": "Develop Design Concept::Sketch Visual Representations",
+      "type": "map_node",
+      "path": [
+        "Develop Design Concept",
+        "Sketch Visual Representations"
+      ],
+      "timestamp": "2026-02-23T09:01:49Z"
+    },
+    {
+      "id": "Develop Design Concept::Develop Detailed Design Specifications",
+      "type": "map_node",
+      "path": [
+        "Develop Design Concept",
+        "Develop Detailed Design Specifications"
+      ],
+      "timestamp": "2026-02-23T09:01:50Z"
+    },
+    {
+      "id": "Develop Detailed Design Specifications::Define Requirements",
+      "type": "map_node",
+      "path": [
+        "Develop Detailed Design Specifications",
+        "Define Requirements"
+      ],
+      "timestamp": "2026-02-23T09:01:54Z"
+    },
+    {
+      "id": "Develop Detailed Design Specifications::Design Architecture",
+      "type": "map_node",
+      "path": [
+        "Develop Detailed Design Specifications",
+        "Design Architecture"
+      ],
+      "timestamp": "2026-02-23T09:01:55Z"
+    },
+    {
+      "id": "Design Architecture::Research and select technologies",
+      "type": "map_node",
+      "path": [
+        "Design Architecture",
+        "Research and select technologies"
+      ],
+      "timestamp": "2026-02-23T09:01:58Z"
+    },
+    {
+      "id": "Design Architecture::Design system architecture",
+      "type": "map_node",
+      "path": [
+        "Design Architecture",
+        "Design system architecture"
+      ],
+      "timestamp": "2026-02-23T09:02:00Z"
+    },
+    {
+      "id": "Design system architecture::Analyze Business Requirements",
+      "type": "map_node",
+      "path": [
+        "Design system architecture",
+        "Analyze Business Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:03Z"
+    },
+    {
+      "id": "Design system architecture::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design system architecture",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:04Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:07Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:08Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Business Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Business Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:12Z"
+    },
+    {
+      "id": "Analyze Business Requirements::Gather Initial Requirements",
+      "type": "map_node",
+      "path": [
+        "Analyze Business Requirements",
+        "Gather Initial Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:16Z"
+    },
+    {
+      "id": "Analyze Business Requirements::Analyze Functional Requirements",
+      "type": "map_node",
+      "path": [
+        "Analyze Business Requirements",
+        "Analyze Functional Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:17Z"
+    },
+    {
+      "id": "Analyze Business Requirements::Define Non-Functional Requirements",
+      "type": "map_node",
+      "path": [
+        "Analyze Business Requirements",
+        "Define Non-Functional Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:18Z"
+    },
+    {
+      "id": "Analyze Business Requirements::Create Use Case Diagrams",
+      "type": "map_node",
+      "path": [
+        "Analyze Business Requirements",
+        "Create Use Case Diagrams"
+      ],
+      "timestamp": "2026-02-23T09:02:19Z"
+    },
+    {
+      "id": "Design Database Schema::Design Entity-Relationship Diagram",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Entity-Relationship Diagram"
+      ],
+      "timestamp": "2026-02-23T09:02:20Z"
+    },
+    {
+      "id": "Design Database Schema::Create Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Create Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:21Z"
+    },
+    {
+      "id": "Design Database Schema::Implement Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Implement Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:22Z"
+    },
+    {
+      "id": "Implement Database Schema::Define Data Requirements",
+      "type": "map_node",
+      "path": [
+        "Implement Database Schema",
+        "Define Data Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:25Z"
+    },
+    {
+      "id": "Implement Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Implement Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:26Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:30Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:31Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:34Z"
+    },
+    {
+      "id": "Design Database Schema::Design Entity-Relationship Diagram",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Entity-Relationship Diagram"
+      ],
+      "timestamp": "2026-02-23T09:02:35Z"
+    },
+    {
+      "id": "Design Database Schema::Implement Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Implement Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:36Z"
+    },
+    {
+      "id": "Implement Database Schema::Define Data Requirements",
+      "type": "map_node",
+      "path": [
+        "Implement Database Schema",
+        "Define Data Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:40Z"
+    },
+    {
+      "id": "Implement Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Implement Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:02:41Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:44Z"
+    },
+    {
+      "id": "Design Database Schema::Design Entity Types",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Entity Types"
+      ],
+      "timestamp": "2026-02-23T09:02:46Z"
+    },
+    {
+      "id": "Design Entity Types::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:49Z"
+    },
+    {
+      "id": "Design Entity Types::Design Entity Types",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Design Entity Types"
+      ],
+      "timestamp": "2026-02-23T09:02:50Z"
+    },
+    {
+      "id": "Design Entity Types::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:02:56Z"
+    },
+    {
+      "id": "Design Entity Types::Define Entity Types",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Define Entity Types"
+      ],
+      "timestamp": "2026-02-23T09:02:58Z"
+    },
+    {
+      "id": "Design Entity Types::Design Data Model",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Design Data Model"
+      ],
+      "timestamp": "2026-02-23T09:02:59Z"
+    },
+    {
+      "id": "Design Data Model::Analyze Business Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Data Model",
+        "Analyze Business Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:03Z"
+    },
+    {
+      "id": "Design Data Model::Define Data Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Data Model",
+        "Define Data Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:04Z"
+    },
+    {
+      "id": "Design Data Model::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Data Model",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:05Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:09Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Tables",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Tables"
+      ],
+      "timestamp": "2026-02-23T09:03:10Z"
+    },
+    {
+      "id": "Design Database Tables::Define Data Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Tables",
+        "Define Data Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:13Z"
+    },
+    {
+      "id": "Design Database Tables::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Tables",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:14Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:18Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:19Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:22Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:23Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:27Z"
+    },
+    {
+      "id": "Design Database Schema::Define Entities",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Define Entities"
+      ],
+      "timestamp": "2026-02-23T09:03:28Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Tables",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Tables"
+      ],
+      "timestamp": "2026-02-23T09:03:29Z"
+    },
+    {
+      "id": "Design Database Schema::Implement Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Implement Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:30Z"
+    },
+    {
+      "id": "Implement Database Schema::Define Database Requirements",
+      "type": "map_node",
+      "path": [
+        "Implement Database Schema",
+        "Define Database Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:33Z"
+    },
+    {
+      "id": "Implement Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Implement Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:34Z"
+    },
+    {
+      "id": "Design Database Schema::Define Data Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Define Data Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:38Z"
+    },
+    {
+      "id": "Design Database Schema::Design Database Schema",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Database Schema"
+      ],
+      "timestamp": "2026-02-23T09:03:39Z"
+    },
+    {
+      "id": "Design Database Schema::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:42Z"
+    },
+    {
+      "id": "Design Database Schema::Design Entity Types",
+      "type": "map_node",
+      "path": [
+        "Design Database Schema",
+        "Design Entity Types"
+      ],
+      "timestamp": "2026-02-23T09:03:43Z"
+    },
+    {
+      "id": "Design Entity Types::Define Entity Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Define Entity Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:46Z"
+    },
+    {
+      "id": "Design Entity Types::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Types",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:03:47Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:50Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:03:51Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:03:55Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:03:56Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:00Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:01Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze requirements for entities",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze requirements for entities"
+      ],
+      "timestamp": "2026-02-23T09:04:04Z"
+    },
+    {
+      "id": "Design Entity Classes::Design entity classes diagram",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design entity classes diagram"
+      ],
+      "timestamp": "2026-02-23T09:04:05Z"
+    },
+    {
+      "id": "Design Entity Classes::Implement entity classes in code",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Implement entity classes in code"
+      ],
+      "timestamp": "2026-02-23T09:04:06Z"
+    },
+    {
+      "id": "Implement entity classes in code::Define entity classes schema",
+      "type": "map_node",
+      "path": [
+        "Implement entity classes in code",
+        "Define entity classes schema"
+      ],
+      "timestamp": "2026-02-23T09:04:10Z"
+    },
+    {
+      "id": "Implement entity classes in code::Implement entity class creation",
+      "type": "map_node",
+      "path": [
+        "Implement entity classes in code",
+        "Implement entity class creation"
+      ],
+      "timestamp": "2026-02-23T09:04:11Z"
+    },
+    {
+      "id": "Implement entity classes in code::Implement entity class validation",
+      "type": "map_node",
+      "path": [
+        "Implement entity classes in code",
+        "Implement entity class validation"
+      ],
+      "timestamp": "2026-02-23T09:04:12Z"
+    },
+    {
+      "id": "Implement entity classes in code::Integrate entity classes into application code",
+      "type": "map_node",
+      "path": [
+        "Implement entity classes in code",
+        "Integrate entity classes into application code"
+      ],
+      "timestamp": "2026-02-23T09:04:13Z"
+    },
+    {
+      "id": "Integrate entity classes into application code::Analyze existing entity classes",
+      "type": "map_node",
+      "path": [
+        "Integrate entity classes into application code",
+        "Analyze existing entity classes"
+      ],
+      "timestamp": "2026-02-23T09:04:16Z"
+    },
+    {
+      "id": "Integrate entity classes into application code::Design new entity classes",
+      "type": "map_node",
+      "path": [
+        "Integrate entity classes into application code",
+        "Design new entity classes"
+      ],
+      "timestamp": "2026-02-23T09:04:17Z"
+    },
+    {
+      "id": "Design new entity classes::Define entity class requirements",
+      "type": "map_node",
+      "path": [
+        "Design new entity classes",
+        "Define entity class requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:21Z"
+    },
+    {
+      "id": "Design new entity classes::Design initial entity classes",
+      "type": "map_node",
+      "path": [
+        "Design new entity classes",
+        "Design initial entity classes"
+      ],
+      "timestamp": "2026-02-23T09:04:22Z"
+    },
+    {
+      "id": "Design new entity classes::Implement entity classes",
+      "type": "map_node",
+      "path": [
+        "Design new entity classes",
+        "Implement entity classes"
+      ],
+      "timestamp": "2026-02-23T09:04:23Z"
+    },
+    {
+      "id": "Design new entity classes::Test and validate entity classes",
+      "type": "map_node",
+      "path": [
+        "Design new entity classes",
+        "Test and validate entity classes"
+      ],
+      "timestamp": "2026-02-23T09:04:24Z"
+    },
+    {
+      "id": "Integrate entity classes into application code::Implement entity classes in code",
+      "type": "map_node",
+      "path": [
+        "Integrate entity classes into application code",
+        "Implement entity classes in code"
+      ],
+      "timestamp": "2026-02-23T09:04:25Z"
+    },
+    {
+      "id": "Integrate entity classes into application code::Test and validate entity classes",
+      "type": "map_node",
+      "path": [
+        "Integrate entity classes into application code",
+        "Test and validate entity classes"
+      ],
+      "timestamp": "2026-02-23T09:04:26Z"
+    },
+    {
+      "id": "Design Entity Classes::Test and validate entities",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Test and validate entities"
+      ],
+      "timestamp": "2026-02-23T09:04:27Z"
+    },
+    {
+      "id": "Design Entity Classes::Refine and update entities based on testing",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Refine and update entities based on testing"
+      ],
+      "timestamp": "2026-02-23T09:04:28Z"
+    },
+    {
+      "id": "Design Entity Classes::Implement Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Implement Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:29Z"
+    },
+    {
+      "id": "Implement Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Implement Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:33Z"
+    },
+    {
+      "id": "Implement Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Implement Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:34Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:38Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:39Z"
+    },
+    {
+      "id": "Design Entity Classes::Implement Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Implement Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:40Z"
+    },
+    {
+      "id": "Implement Entity Classes::Define Entity Requirements",
+      "type": "map_node",
+      "path": [
+        "Implement Entity Classes",
+        "Define Entity Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:43Z"
+    },
+    {
+      "id": "Implement Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Implement Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:44Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:48Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:49Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:53Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:54Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:04:57Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:04:58Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:01Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:02Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:05Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:06Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:10Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:12Z"
+    },
+    {
+      "id": "Design Entity Classes::Define Entity Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Define Entity Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:15Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:16Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:20Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:21Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:24Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:25Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:32Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:33Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:43Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:44Z"
+    },
+    {
+      "id": "Design Entity Classes::Define Entity Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Define Entity Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:48Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:49Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:52Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:53Z"
+    },
+    {
+      "id": "Design Entity Classes::Implement Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Implement Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:54Z"
+    },
+    {
+      "id": "Implement Entity Classes::Define Entity Requirements",
+      "type": "map_node",
+      "path": [
+        "Implement Entity Classes",
+        "Define Entity Requirements"
+      ],
+      "timestamp": "2026-02-23T09:05:58Z"
+    },
+    {
+      "id": "Implement Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Implement Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:05:59Z"
+    },
+    {
+      "id": "Design Entity Classes::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:06:03Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Entity Classes",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Entity Classes"
+      ],
+      "timestamp": "2026-02-23T09:06:04Z"
+    },
+    {
+      "id": "Design Entity Classes::Define Entity Types",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Define Entity Types"
+      ],
+      "timestamp": "2026-02-23T09:06:08Z"
+    },
+    {
+      "id": "Design Entity Classes::Design Data Models",
+      "type": "map_node",
+      "path": [
+        "Design Entity Classes",
+        "Design Data Models"
+      ],
+      "timestamp": "2026-02-23T09:06:10Z"
+    },
+    {
+      "id": "Design Data Models::Analyze Requirements",
+      "type": "map_node",
+      "path": [
+        "Design Data Models",
+        "Analyze Requirements"
+      ],
+      "timestamp": "2026-02-23T09:06:13Z"
+    },
+    {
+      "id": "Design Data Models::Define Data Entities",
+      "type": "map_node",
+      "path": [
+        "Design Data Models",
+        "Define Data Entities"
+      ],
+      "timestamp": "2026-02-23T09:06:14Z"
+    },
+    {
+      "id": "Design Data Models::Design Data Relationships",
+      "type": "map_node",
+      "path": [
+        "Design Data Models",
+        "Design Data Relationships"
+      ],
+      "timestamp": "2026-02-23T09:06:15Z"
+    },
+    {
+      "id": "Design Data Relationships::Analyze existing data sources",
+      "type": "map_node",
+      "path": [
+        "Design Data Relationships",
+        "Analyze existing data sources"
+      ],
+      "timestamp": "2026-02-23T09:06:19Z"
+    },
+    {
+      "id": "Design Data Relationships::Identify key data points",
+      "type": "map_node",
+      "path": [
+        "Design Data Relationships",
+        "Identify key data points"
+      ],
+      "timestamp": "2026-02-23T09:06:20Z"
+    },
+    {
+      "id": "Design Data Relationships::Design data model",
+      "type": "map_node",
+      "path": [
+        "Design Data Relationships",
+        "Design data model"
+      ],
+      "timestamp": "2026-02-23T09:06:21Z"
+    },
+    {
+      "id": "Design Data Relationships::Implement data relationships",
+      "type": "map_node",
+      "path": [
+        "Design Data Relationships",
+        "Implement data relationships"
+      ],
+      "timestamp": "2026-02-23T09:06:22Z"
+    }
+  ],
+  "map": {
+    "build a house": {
+      "\"Research local building codes and regulations\"": {},
+      "Assess site and requirements": {}
+    },
+    "Research local building codes and regulations": {
+      "\"Research local building codes and regulations\"": {},
+      "\"Research local building codes\"": {},
+      "\"Gather relevant local regulations\"": {},
+      "\"Analyze and summarize building code information\"": {}
+    },
+    "Analyze and summarize building code information": {
+      "\"Gather Building Plans and Specifications\"": {},
+      "\"Analyze Existing Code for Compliance\"": {}
+    },
+    "Analyze Existing Code for Compliance": {
+      "\"Analyze Code for Style and Standards\"": {}
+    },
+    "Analyze Code for Style and Standards": {
+      "\"Analyze Code Style\"": {}
+    },
+    "buid a task": {},
+    "buid a fintech startup": {},
+    "examine the stock of tesla": {},
+    "Assess site and requirements": {
+      "Analyze Existing Site Conditions": {},
+      "Define Functional Requirements": {},
+      "Develop Design Concept": {}
+    },
+    "Develop Design Concept": {
+      "Research Target Audience": {},
+      "Define Core Concept": {},
+      "Sketch Visual Representations": {},
+      "Develop Detailed Design Specifications": {}
+    },
+    "Develop Detailed Design Specifications": {
+      "Define Requirements": {},
+      "Design Architecture": {}
+    },
+    "Design Architecture": {
+      "Research and select technologies": {},
+      "Design system architecture": {}
+    },
+    "Design system architecture": {
+      "Analyze Business Requirements": {},
+      "Design Database Schema": {}
+    },
+    "Design Database Schema": {
+      "Analyze Requirements": {},
+      "Design Database Schema": {},
+      "Analyze Business Requirements": {},
+      "Design Entity-Relationship Diagram": {},
+      "Create Database Schema": {},
+      "Implement Database Schema": {},
+      "Design Entity Types": {},
+      "Design Database Tables": {},
+      "Define Entities": {},
+      "Define Data Requirements": {}
+    },
+    "Analyze Business Requirements": {
+      "Gather Initial Requirements": {},
+      "Analyze Functional Requirements": {},
+      "Define Non-Functional Requirements": {},
+      "Create Use Case Diagrams": {}
+    },
+    "Implement Database Schema": {
+      "Define Data Requirements": {},
+      "Design Database Schema": {},
+      "Define Database Requirements": {}
+    },
+    "Design Entity Types": {
+      "Analyze Requirements": {},
+      "Design Entity Types": {},
+      "Define Entity Types": {},
+      "Design Data Model": {},
+      "Define Entity Requirements": {},
+      "Design Entity Classes": {}
+    },
+    "Design Data Model": {
+      "Analyze Business Requirements": {},
+      "Define Data Requirements": {},
+      "Design Database Schema": {}
+    },
+    "Design Database Tables": {
+      "Define Data Requirements": {},
+      "Design Database Schema": {}
+    },
+    "Design Entity Classes": {
+      "Analyze Requirements": {},
+      "Design Entity Classes": {},
+      "Analyze requirements for entities": {},
+      "Design entity classes diagram": {},
+      "Implement entity classes in code": {},
+      "Test and validate entities": {},
+      "Refine and update entities based on testing": {},
+      "Implement Entity Classes": {},
+      "Define Entity Requirements": {},
+      "Define Entity Types": {},
+      "Design Data Models": {}
+    },
+    "Implement entity classes in code": {
+      "Define entity classes schema": {},
+      "Implement entity class creation": {},
+      "Implement entity class validation": {},
+      "Integrate entity classes into application code": {}
+    },
+    "Integrate entity classes into application code": {
+      "Analyze existing entity classes": {},
+      "Design new entity classes": {},
+      "Implement entity classes in code": {},
+      "Test and validate entity classes": {}
+    },
+    "Design new entity classes": {
+      "Define entity class requirements": {},
+      "Design initial entity classes": {},
+      "Implement entity classes": {},
+      "Test and validate entity classes": {}
+    },
+    "Implement Entity Classes": {
+      "Analyze Requirements": {},
+      "Design Entity Classes": {},
+      "Define Entity Requirements": {}
+    },
+    "Design Data Models": {
+      "Analyze Requirements": {},
+      "Define Data Entities": {},
+      "Design Data Relationships": {}
+    },
+    "Design Data Relationships": {
+      "Analyze existing data sources": {},
+      "Identify key data points": {},
+      "Design data model": {},
+      "Implement data relationships": {}
+    }
+  }
+}

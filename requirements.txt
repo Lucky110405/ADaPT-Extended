@@ -1,0 +1,8 @@
+streamlit
+ollama
+httpx
+python-dotenv
+transformers
+torch
+langgraph
+langchain

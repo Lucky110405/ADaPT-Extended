@@ -1,0 +1,14 @@
+{
+  "build a house": {
+    "Research average construction costs for houses in Bangalore, India.": {},
+    "Collect data on typical cost ranges for simple, standard housing.": {},
+    "Analyze collected data to determine the average cost per square foot.": {},
+    "Present the average cost per square foot to the user.": {}
+  },
+  "make a python programm for sorting arrays": {
+    "Design the core sorting algorithm": {},
+    "Implement the sorting algorithm in Python": {},
+    "Test the sorting algorithm": {},
+    "Document the code": {}
+  }
+}

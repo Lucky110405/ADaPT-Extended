@@ -1,57 +1,53 @@
 from ollama import chat
 from ollama import ChatResponse
 
-"""
+"""Cross-questioning helper agent.
 
-cross questioning agent:
+Provides `cross_questioning(task, cross_questions)` and `answering(task, question)`.
 
-if more context is deemed needed for complete understanding and execution of the task, then this agent will
-ask clarifying questions to a LLM or if needed then from the user to get the full understanding of the task
-
+This module prefers asking the user interactively when run in a terminal.
 """
 
 def answering(task, question):
-    response: ChatResponse = chat(model='gemma3:1b', messages=[
-    {
-        'role': 'user',
-        'content': f'''You are a clarification Question Answering Agent. you are given a task, 
-        and more context is deemed necessary for the complete understanding or execution of a task, 
-        so your work is to think and answer this clarification question if you can by yourself 
-        or if you cannot then specify that human intervention is needed to answer it.
-        if you think you need more information to answer the question, you should still specify that human intervention is needed, do NOT say "I need more information" and Do NOT add explanations.
+    """Attempt to answer a clarifying question.
 
-        Instructions-
-        1. If you can answer the clarifying question yourself, the write the response strictly in this format: "Q: [the question you are answering] , A: [your answer to that question]".
-        2. If you cannot answer it, respond strictly only with "Human Intervention Needed."
-        3. Do NOT provide any additional information other than the answer specified in the above formats.
-        4. Do NOT say "I need more information" and Do NOT add explanations
-        5. Use ONLY the two formats above and Nothing else
+    This implementation prompts the user for an answer. If the user leaves
+    the input blank, it returns the sentinel string indicating human
+    intervention is needed.
+    """
+    prompt = f"Clarifying Question: {question}\nProvide an answer (leave blank if you cannot answer): "
+    try:
+        user_answer = input(prompt).strip()
+    except Exception:
+        # Non-interactive environment: indicate human intervention
+        return "Human Intervention Needed."
 
-        Task: {task}
-        Clarifying Question: {question}''',
-    },
-    ])
-    answer = response['message']['content']
+    if not user_answer:
+        return "Human Intervention Needed."
+    return f"Q: {question} , A: {user_answer}"
 
-    if "human intervention needed." in answer.strip().lower():
-        print(f"Q: {question}")
-        user_answer = input("Your answer: ")
-        return f"Q: {question} , A: {user_answer}"
-    else:
-        return answer
 
 def cross_questioning(task, cross_questions):
+    """Run cross-questioning for a task.
 
-    task = task
-    cross_questions = cross_questions
-    questions_list = cross_questions.split(" || ")
-    extra_context = ""
+    `cross_questions` is expected as a string with questions separated by
+    " || ". Returns a joined string of answers (one per question).
+    """
+    if not cross_questions:
+        return ""
+    questions = [q.strip() for q in cross_questions.split("||") if q.strip()]
+    answers = []
+    for q in questions:
+        ans = answering(task, q)
+        answers.append(ans)
+    return "\n".join(answers)
 
-    for question in questions_list:
-        answer = answering(task, question)
-        extra_context += f"\n{answer}"
 
-    return extra_context
+if __name__ == "__main__":
+    task = "Plan a trip to Japan."
+    cross_questions = "What is the duration of the trip? || What is your budget for the trip?"
+    print(cross_questioning(task, cross_questions))
+
 
 if __name__ == "__main__":
     task = "Plan a trip to Japan."

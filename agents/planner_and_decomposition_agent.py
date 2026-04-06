@@ -11,9 +11,7 @@ Plans the sequence of execution of these subtasks, and how they are dependent of
 
 """
 
-def planner_and_decomposition(task, extra_context):  
-    task = task
-    extra_context = extra_context
+def planner_and_decomposition(task, extra_context, memory):  
 
     response: ChatResponse = chat(model='gemma3:1b', messages=[
     {
@@ -24,16 +22,28 @@ def planner_and_decomposition(task, extra_context):
         Instructions:
         - Decompose the task into subtasks.
         - give only up to 4 subtasks.
-        - the response should STRICTLY ONLY BE in this format: ["first subtask" , "second subtask" , ...] and so on.
+        - Return JSON list
+        - Maintain logical order
         - DONT ADD ANYTING EXTRA OTHER THAN WHAT SPECIFIED.
         - apart from the list of subtasks, there should be no other text in the response.
         - NO NUMBERING OR INDEXING SHOULD BE USED IN THE SUBTASKS, JUST THE RAW SUBTASKS IN A LIST.
 
         Task: {task}
-        Extra Context: {extra_context}''',
+        Extra Context: {extra_context}
+        known info from memory: {memory}''',
     },
     ])
     subtasks = response['message']['content']
     return subtasks
 
-# planner_and_decomposition("Plan a trip to Paris", "The user wants to visit the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. They have 5 days for the trip and prefer a mix of sightseeing and leisure activities.")
+if __name__ == "__main__":
+    plan = planner_and_decomposition("build a house", "", {})
+    print("plan:", plan)
+    lines = plan.split("\n")
+    subtasks = []
+    for line in lines:
+        line = line.strip()
+        if line.startswith("-"):
+            subtasks.append(line[1:].strip())
+
+    print(f"Subtasks: {subtasks}")

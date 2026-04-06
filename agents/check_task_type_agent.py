@@ -1,50 +1,63 @@
+from ollama import chat
+from ollama import ChatResponse
 from transformers import pipeline
-from logger import log_event
 
 """
+
 check task type agent: check the type of task & Confidence Score
 
 Understanding what the user is asking or wants the model to do?
 and classifying if it can be responded to directly ie. is it a simple task or
 a complex task where we might need more clarification on the task, and
 what are the dependencies needed to complete the task ?
-"""
 
-try:
-    classifier = pipeline("zero-shot-classification", model="cross-encoder/nli-MiniLM2-L6-H768")
-except Exception as e:
-    print(f"Warning: Failed to load transformer model: {e}")
-    print("Falling back to keyword-based classification")
-    classifier = None
+"""
+classifier = pipeline("zero-shot-classification", model="cross-encoder/nli-MiniLM2-L6-H768")     
 
 
 def check_task_type(task):
-    """Classify task as simple or complex."""
     task_lower = task.lower()
-    
-    # Rule-based heuristic for obvious complex tasks
-    complex_keywords = ["make", "build", "plan", "design", "develop", "create", "construct"]
-    if any(word in task_lower for word in complex_keywords):
-        log_event("process", "Task classified as complex (keyword match)")
+    if any(word in task_lower for word in ["make", "build", "plan", "design", "develop"]):
         return "complex task"
 
-    # Try ML-based classification if model is available
-    if classifier is not None:
-        try:
-            labels = ["multi-step task or requiring planning", "single physical or actionable step"]
-            result = classifier(task, labels, multi_label=False)
-            log_event("process", "Task classified by transformer model")
-            if result["labels"][0] == "multi-step task or requiring planning":
-                return "complex task"
-            else:
-                return "simple task"
-        except Exception as e:
-            print(f"Error in transformer classification: {e}")
-            # Fall back to simple heuristic
-            return "simple task"
-    
-    return "simple task"
+    labels=["multi-step task or requiring planning", "single physical or actionable step"]
+    result = classifier(task, labels, multi_label=False)
+    print("module check_task_type_agent executed")
+    if result["labels"][0] == "multi-step task or requiring planning":
+        return "complex task"
+    else:
+        return "simple task"
+    # return result['labels'][0]
 
+
+# def check_task_type(task):
+    task = task
+
+    response: ChatResponse = chat(model='gemma3:1b', messages=[
+    {
+        'role': 'user',
+        'content': f'''You are a Task Complexity Classifier. Your job is to analyze the given task and determine whether it is a Simple Task or a Complex Task.
+
+        Definitions-
+
+        Simple Task:
+        A task that can be completed directly without breaking it into smaller subtasks. It involves a single clear action or straightforward execution.
+
+        Complex Task:
+        A task that requires decomposition into multiple subtasks, steps, or stages to be completed successfully. It may involve planning, dependencies, multiple objectives, or sequential actions.
+
+        Instructions-
+
+        Carefully analyze the given task.
+        Decide whether the task is Simple or Complex based on the definitions.
+        give the answer in a single word.
+        Do NOT decompose the task — only classify it.
+
+        Task: {task}''',
+    },
+    ])
+    task_type = response['message']['content']
+    return task_type
 
 if __name__ == "__main__":
     task = input("Enter the task: ")

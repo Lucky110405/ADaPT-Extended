@@ -1,11 +1,18 @@
+from importlib.resources import path
 from agents.check_task_type_agent import check_task_type
-from agents.external_help_check_agent import cross_questioning_handler, external_help_check_handler
+from agents.external_help_check_agent import cross_questioning, external_help_check, online_search
 from agents.planner_and_decomposition_agent import planner_and_decomposition
 from executer import execute
 import json
 import os
 from typing import Any
+from langchain.tools import tool
+from langgraph.func import entrypoint, task
+from langchain_ollama import ChatOllama
 from logger import log_event
+
+
+llm = ChatOllama(model="gemma3:1b", temperature=0)
 
 
 def get_ai_content(resp: Any) -> str:
@@ -65,16 +72,17 @@ def print_tree(tree, indent=0):
         print("  " * indent + f"- {task}")
         print_tree(subtasks, indent + 1)
 
+@task
 def complex_task_handler(given_task, memory):
     log_event("process", f"Handling complex task and checking for external help: {given_task}")
-    resp = external_help_check_handler(given_task, memory)
+    resp = external_help_check(given_task, memory).result()
     log_event("result", "External help check completed", {"task": given_task, "response": resp})
-    extra_context = resp if isinstance(resp, str) else str(resp)
+    extra_context = get_ai_content(resp)
     print(f"Extra context: {extra_context}")
     print("Plan for executing the task:")
     log_event("process", f"Planning and decomposing task: {given_task} with extra context: {extra_context}")
-    plan_text = planner_and_decomposition(given_task, extra_context, memory).strip()
-    
+    plan_text = planner_and_decomposition(given_task, extra_context, memory).strip('[]')
+    # subtasks = [task.strip() for task in subtasks.split(',') if task.strip()]
     lines = plan_text.split("\n")
     subtasks = []
     for line in lines:
@@ -87,6 +95,7 @@ def complex_task_handler(given_task, memory):
     return subtasks
 
 
+@entrypoint()
 def main_agent(given_task):
     task_tree = {}
     visited = set()
@@ -115,6 +124,8 @@ def main_agent(given_task):
             continue
         if task_type == "simple task":
             print("The task is simple and can be executed directly.")
+            # print("Task executed successfully.")
+            # return
             result = execute(current_task)
             if result:
                 print("Task executed successfully.")
@@ -124,7 +135,7 @@ def main_agent(given_task):
                 print("The task must be complex and requires decomposition into subtasks.")
                 log_event("result", "Task execution failed, treating as complex task", {"task": current_task})
                 log_event("process", f"Processing task: {current_task}")
-                subtasks = complex_task_handler(current_task, memory)
+                subtasks = complex_task_handler(current_task, memory).result()
                 if not subtasks:
                     print("No subtasks → executing directly")
                     log_event("process", f"No subtasks found for task: {current_task}, so executing directly")
@@ -137,7 +148,7 @@ def main_agent(given_task):
         elif task_type == "complex task":
             print("The task is complex and requires decomposition into subtasks.")
             log_event("process", f"Processing task: {current_task}")
-            subtasks = complex_task_handler(current_task, memory)
+            subtasks = complex_task_handler(current_task, memory).result()
             if not subtasks:
                 print("No subtasks → executing directly")
                 log_event("process", f"No subtasks found for task: {current_task}, so executing directly")

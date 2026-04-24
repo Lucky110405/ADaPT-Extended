@@ -10,9 +10,10 @@ from langchain.tools import tool
 from langgraph.func import entrypoint, task
 from langchain_ollama import ChatOllama
 from logger import log_event
+import ast
 
 
-llm = ChatOllama(model="gemma3:1b", temperature=0)
+llm = ChatOllama(model="gemma3:1b", temperature=0, base_url="http://localhost:11434")
 
 
 def get_ai_content(resp: Any) -> str:
@@ -45,6 +46,41 @@ def get_ai_content(resp: Any) -> str:
 
     return str(msg)
 
+def parse_subtasks(plan_text):
+    import json
+    import re
+
+    # Try JSON first
+    try:
+        data = json.loads(plan_text)
+        if isinstance(data, dict):
+            return data.get("subtasks", [])
+        return data
+    except:
+        pass
+
+    # Try Python list
+    try:
+        import ast
+        return ast.literal_eval(plan_text)
+    except:
+        pass
+
+    # Regex fallback
+    items = re.findall(r'"([^"]+)"', plan_text)
+
+    if not items:
+        items = re.findall(r"'([^']+)'", plan_text)
+
+    # 🚨 FILTER BAD ITEMS
+    filtered = [
+        item.strip()
+        for item in items
+        if item.lower() not in ["subtasks", "task", "steps"]
+        and len(item.strip()) > 3
+    ]
+
+    return filtered
 
 def add_subtasks(tree, parent, subtasks):
     if parent not in tree:
@@ -74,30 +110,31 @@ def print_tree(tree, indent=0):
 
 @task
 def complex_task_handler(given_task, memory):
-    log_event("process", f"Handling complex task and checking for external help: {given_task}")
+    # log_event("process", f"Handling complex task and checking for external help: {given_task}")
     resp = external_help_check(given_task, memory).result()
-    log_event("result", "External help check completed", {"task": given_task, "response": resp})
+    # log_event("result", "External help check completed", {"task": given_task, "response": resp})
     extra_context = get_ai_content(resp)
     print(f"Extra context: {extra_context}")
     print("Plan for executing the task:")
-    log_event("process", f"Planning and decomposing task: {given_task} with extra context: {extra_context}")
+    # log_event("process", f"Planning and decomposing task: {given_task} with extra context: {extra_context}")
     plan_text = planner_and_decomposition(given_task, extra_context, memory).strip('[]')
     # subtasks = [task.strip() for task in subtasks.split(',') if task.strip()]
-    lines = plan_text.split("\n")
-    subtasks = []
-    for line in lines:
-        line = line.strip()
-        if line.startswith("-"):
-            subtasks.append(line[1:].strip())
+    subtasks = parse_subtasks(plan_text)
+    # lines = plan_text.split("\n")
+    # subtasks = []
+    # for line in lines:
+    #     line = line.strip()
+    #     if line.startswith("-"):
+    #         subtasks.append(line[1:].strip())
 
     print(f"Subtasks: {subtasks}")
-    log_event("result", "Subtasks generated", {"task": given_task, "subtasks": subtasks})
+    # log_event("result", "Subtasks generated", {"task": given_task, "subtasks": subtasks})
     return subtasks
 
 
 @entrypoint()
 def main_agent(given_task):
-    task_tree = {}
+    new_task_tree = {}
     visited = set()
     memory = {}
     queue = [(given_task, 0)]
@@ -107,60 +144,60 @@ def main_agent(given_task):
         current_task, depth = queue.pop(0)
         if current_task in visited:
             print(f"Already visited task: {current_task}, skipping to avoid cycles.")
-            log_event("process", f"Skipping task: {current_task}")
+            # log_event("process", f"Skipping task: {current_task}")
             continue
         visited.add(current_task)
         print(f"Received task: {current_task} at depth {depth}")
-        log_event("process", f"Processing task: {current_task}")
+        # log_event("process", f"Processing task: {current_task}")
         task_type = check_task_type(current_task)
         print(f"Task Type: {task_type}")
-        log_event("result", "Task type determined", {"task": current_task, "type": task_type})
+        # log_event("result", "Task type determined", {"task": current_task, "type": task_type})
         print(type(task_type))
 
         if depth > 3:
             print("⚠️ Max depth reached → forcing execution")
-            log_event("process", f"Max depth reached for task: {current_task}, forcing execution")
+            # log_event("process", f"Max depth reached for task: {current_task}, forcing execution")
             execute(current_task)
             continue
         if task_type == "simple task":
             print("The task is simple and can be executed directly.")
-            # print("Task executed successfully.")
+            print("Task executed successfully.")
             # return
             result = execute(current_task)
             if result:
                 print("Task executed successfully.")
-                log_event("result", "Task executed successfully", {"task": current_task, "result": result})
+                # log_event("result", "Task executed successfully", {"task": current_task, "result": result})
             else:
                 print("Task execution failed.")
                 print("The task must be complex and requires decomposition into subtasks.")
-                log_event("result", "Task execution failed, treating as complex task", {"task": current_task})
-                log_event("process", f"Processing task: {current_task}")
+                # log_event("result", "Task execution failed, treating as complex task", {"task": current_task})
+                # log_event("process", f"Processing task: {current_task}")
                 subtasks = complex_task_handler(current_task, memory).result()
                 if not subtasks:
                     print("No subtasks → executing directly")
-                    log_event("process", f"No subtasks found for task: {current_task}, so executing directly")
+                    # log_event("process", f"No subtasks found for task: {current_task}, so executing directly")
                     execute(current_task)
                     continue
-                add_subtasks(task_tree, current_task, subtasks)
+                add_subtasks(new_task_tree, current_task, subtasks)
                 for subtask in subtasks:
                     queue.append((subtask, depth + 1))
 
         elif task_type == "complex task":
             print("The task is complex and requires decomposition into subtasks.")
-            log_event("process", f"Processing task: {current_task}")
+            # log_event("process", f"Processing task: {current_task}")
             subtasks = complex_task_handler(current_task, memory).result()
             if not subtasks:
                 print("No subtasks → executing directly")
-                log_event("process", f"No subtasks found for task: {current_task}, so executing directly")
+                # log_event("process", f"No subtasks found for task: {current_task}, so executing directly")
                 execute(current_task)
                 continue
-            add_subtasks(task_tree, current_task, subtasks)
+            add_subtasks(new_task_tree, current_task, subtasks)
             for subtask in subtasks:
                 queue.append((subtask, depth + 1))
 
-    save_task_tree(task_tree)
+    save_task_tree(new_task_tree)
     print("Final Task Tree:")
-    print_tree(task_tree)
+    print_tree(new_task_tree)
     print(memory)
 
     return True

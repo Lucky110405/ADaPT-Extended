@@ -51,10 +51,10 @@ def online_search(task, memory):
     response = requests.request("POST", url, headers=headers, data=payload)
 
     print(response.text)
-    log_event("tool", "Search tool used", {"query": task})
+    # log_event("tool", "Search tool used", {"query": task})
     search_result = response.text
     memory[task] = search_result
-    log_event("result", "Search result", search_result)
+    # log_event("result", "Search result", search_result)
     return search_result
 
 @tool
@@ -68,7 +68,7 @@ def cross_questioning(task, memory):
         return "no extra context needed"
     extra_context = answering(task, cross_questions, memory)
     memory[cross_questions] = extra_context
-    log_event("tool", "Cross-questioning tool used", {"task": task, "questions": cross_questions, "context": extra_context})
+    # log_event("tool", "Cross-questioning tool used", {"task": task, "questions": cross_questions, "context": extra_context})
     return extra_context
 
 
@@ -98,7 +98,7 @@ def generate_cross_questions(task, memory):
     ]
     cross_questions = llm.invoke(messages).content.strip()
     print(f"Cross Questions: {cross_questions}")
-    log_event("question", "Cross question asked", {"task": task, "questions": cross_questions})
+    # log_event("question", "Cross question asked", {"task": task, "questions": cross_questions})
     return cross_questions
 
 def answering(task, questions, memory):
@@ -132,33 +132,33 @@ def answering(task, questions, memory):
     # If model explicitly requests human intervention, ask the user for an answer
     if "human intervention needed." in text.lower():
         print(f"Model requests human intervention for question(s): {questions}")
-        log_event("question", "Model requests human intervention", {"task": task, "questions": questions})
-        st.session_state.pending_question = questions
-        st.stop()  # pause execution
-        # user_answer = input("Please provide the answer: ")
-        user_answer = st.session_state.get("answers", {})
+        # log_event("question", "Model requests human intervention", {"task": task, "questions": questions})
+        # st.session_state.pending_question = questions
+        # st.stop()  # pause execution
+        user_answer = input("Please provide the answer: ")
+        # user_answer = st.session_state.get("answers", {})
         return f"Q: {questions} , A: {user_answer}"
 
     # Human-in-the-loop review: show model's proposed answer and allow accept/override
     print("Model's proposed answer:\n", text)
-    log_event("answer", "Model's proposed answer:", {"task": task, "questions": questions, "proposed_answer": text})
-    st.write("Model's proposed answer:\n" + text)
-    st.session_state.pending_question = "Do you accept the model's proposed answer? (Y/N)"
-    st.stop()  # pause execution
-    # review = input("Accept model answer? (y/N): ").strip().lower()
-    review = st.session_state.get("answers", {}).get(st.session_state.pending_question, "").strip().lower()
+    # log_event("answer", "Model's proposed answer:", {"task": task, "questions": questions, "proposed_answer": text})
+    # st.write("Model's proposed answer:\n" + text)
+    # st.session_state.pending_question = "Do you accept the model's proposed answer? (Y/N)"
+    # st.stop()  # pause execution
+    review = input("Accept model answer? (y/N): ").strip().lower()
+    # review = st.session_state.get("answers", {}).get(st.session_state.pending_question, "").strip().lower()
     if review in ("y", "yes"):
         # ensure returned format matches expected "Q: ..., A: ..." when possible
         if text.lower().startswith("q:"):
             return text
         return f"Q: {questions} , A: {text}"
     # If user rejects, collect their answer
-    # user_answer = input("Please provide the correct answer: ")
-    st.session_state.pending_question = questions
-    st.stop()
-    user_answer = st.session_state.get("answers", {}).get(st.session_state.pending_question, "")
+    user_answer = input("Please provide the correct answer: ")
+    # st.session_state.pending_question = questions
+    # st.stop()
+    # user_answer = st.session_state.get("answers", {}).get(st.session_state.pending_question, "")
 
-    log_event("answer", "User answered", {"task": task, "answer": user_answer})
+    # log_event("answer", "User answered", {"task": task, "answer": user_answer})
     return f"Q: {questions} , A: {user_answer}"
 
 
